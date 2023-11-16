@@ -2,7 +2,7 @@ package studio8;
 
 public class Question {
 	private String prompt;
-	private String answer;
+	protected String answer;
 	private int points;
 	
 	public Question(String prompt, String answer, int points) {
@@ -16,7 +16,7 @@ public class Question {
 	}
 	
 	public int checkAnswer(String givenAnswer) {
-		if(answer.equals(givenAnswer)) { //String comparison
+		if(answer.contains(givenAnswer)) { //String comparison
 			return this.points;
 		} else {
 			return 0;
